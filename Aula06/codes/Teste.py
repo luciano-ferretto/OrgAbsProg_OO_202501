@@ -1,0 +1,2 @@
+ler = "teste"
+ler.capitalize()
