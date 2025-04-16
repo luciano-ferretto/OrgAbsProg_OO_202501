@@ -67,8 +67,7 @@ public class Main {
         } else {
             System.out.println("Livros Cadastrados:");
             for (Livro livro : livros) {
-                System.out.println(livro.getTitulo()
-                );
+                System.out.println(livro.getTitulo());
             }
         }
     }
