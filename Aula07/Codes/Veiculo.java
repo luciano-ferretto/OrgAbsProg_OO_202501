@@ -5,13 +5,13 @@
 
 import java.time.LocalDate;
 
-class Veiculo { 
+public class Veiculo { 
     // "class" identifica o início da classe
     // Atributos e métodos devem ficar entre as "chaves" {}
-    String marca;
-    String modelo;
-    int ano;
-    String placa;
+    private String marca;
+    private String modelo;
+    private int ano;
+    private String placa;
     // Método Construtor Padrão
     Veiculo(){
         //Aqui invocamos o método construtor com os parâmetros

@@ -7,10 +7,10 @@ public class Main {
         new Veiculo("Fiat", "uno", 95, "placa");
 
         Veiculo cerato = new Veiculo();
-        cerato.marca = "Kia";
-        cerato.modelo = "Cerato 1.6";
-        cerato.ano = 2011;
-        cerato.placa = "ABC-1234";
+        cerato.setMarca("Kia");
+        cerato.setModelo("Cerato");
+        cerato.setAno(2011);;
+        cerato.setPlaca("ABC-1234");
 
         cerato.calcularTempoUso();
         cerato.calcularTempoUso(2030);
@@ -21,8 +21,8 @@ public class Main {
 
         novoCerato.ano = 2020;
 
-        System.out.println(cerato.ano);
-        System.out.println(novoCerato.ano);
+        System.out.println(cerato.getAno());
+        System.out.println(novoCerato.getAno());
         
         
         cerato.ano = 2011;
