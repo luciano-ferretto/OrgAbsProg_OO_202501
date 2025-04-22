@@ -46,7 +46,29 @@ public class Main {
         int anoPublicacao = inputNumerico(lerTeclado, "Digite o ano da publicação:");
         int numeroPaginas = inputNumerico(lerTeclado, "Digite o número de páginas:");
 
-        Livro novoLivro = new Livro();
+        Livro novoLivro;
+
+        int tipoLivro = inputNumerico(lerTeclado, "Qual o tipo do livro: 1-Físico, 2 Digital");
+        if (tipoLivro == 1) {
+            novoLivro = new LivroFisico();
+            System.out.println("Digite as dimensões do livro:");
+            String dimensoes = lerTeclado.nextLine();
+            int numeroExemplares = inputNumerico(lerTeclado, "Digite o número de exemplares:");
+
+            LivroFisico novoLivroFisico = (LivroFisico) novoLivro;
+            novoLivroFisico.setDimensoes(dimensoes);
+            novoLivroFisico.setNumeroExemplares(numeroExemplares);
+            //((LivroFisico) novoLivro).setDimensoes(dimensoes);
+        } else {
+            novoLivro = new LivroDigital();
+            System.out.println("Digite o formato do arquivo:");
+            String formatoArquivo = lerTeclado.nextLine();
+
+            LivroDigital novoLivroDigital = (LivroDigital) novoLivro;
+            novoLivroDigital.setFormatoArquivo(formatoArquivo);
+
+        }
+
         novoLivro.setTitulo(titulo);
         novoLivro.setAutor(autor);
         novoLivro.setAnoPublicacao(anoPublicacao);
@@ -67,9 +89,9 @@ public class Main {
         } else {
             System.out.println("Livros Cadastrados:");
             for (Livro livro : livros) {
-                System.out.println(livro.getTitulo());
+                System.out.println(livro.toString());
             }
-        }
+        }  
     }
 
 

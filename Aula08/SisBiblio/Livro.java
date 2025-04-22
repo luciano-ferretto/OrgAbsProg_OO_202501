@@ -3,7 +3,15 @@ public class Livro {
     private String autor;
     private int anoPublicacao;
     private int numeroPaginas;
-    
+  
+    @Override //annotations
+    public String toString() {
+        String descricao = 
+            "Título: " + getTitulo() +
+            " - Autor: " + getAutor() +
+            " - Ano: " + getAnoPublicacao();
+        return descricao;
+    }
     public String getTitulo() {
         return titulo;
     }
