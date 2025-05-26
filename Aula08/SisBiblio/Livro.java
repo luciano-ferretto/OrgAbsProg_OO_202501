@@ -1,8 +1,17 @@
-public class Livro {
+import java.time.LocalDate;
+
+public abstract class Livro {
     private String titulo;
     private String autor;
     private int anoPublicacao;
     private int numeroPaginas;
+
+    public abstract String getTipoLivro();
+
+    public final int calcularTempoPublicacao(){
+        int anoAtual = LocalDate.now().getYear();
+        return anoAtual - this.anoPublicacao;
+    }
   
     @Override //annotations
     public String toString() {
