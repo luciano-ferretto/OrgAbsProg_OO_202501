@@ -2,15 +2,21 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        LivroFisico livroFisico = new LivroFisico("O Senhor dos Anéis", "J.R.R. Tolkien", 1954, 1216, 5, "15x23 cm");
 
+        double teste = 0.1;
+        double teste2 = 0.7;
+        double teste3 = teste + teste2;
+        System.out.println(teste3);
+
+
+        LivroFisico livroFisico = new LivroFisico("O Senhor dos Anéis", "J.R.R. Tolkien", 1954, 1216, 5, "15x23 cm");
         // Upcasting LivroFisico para Livro
         // Isso é possível porque LivroFisico é uma subclasse de Livro
         Livro varLivro = livroFisico;
 
         // Upcasting LivroDigital para Livro
         Livro varLivro2 = new LivroDigital("1984", "George Orwell", 1949, 328, 1.5, "PDF");
-
+        
         // Exibindo informações do livro físico
         System.out.println("Livro Físico:");
         System.out.println(varLivro.toString());
