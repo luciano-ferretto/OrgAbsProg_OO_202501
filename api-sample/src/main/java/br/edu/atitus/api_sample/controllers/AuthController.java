@@ -20,9 +20,10 @@ public class AuthController {
 	
 	private final UserService service;
 	
-	public AuthController() {
+	// Injeção de dependência via método construtor
+	public AuthController(UserService service) {
 		super();
-		this.service = new UserService();
+		this.service = service;
 	}
 
 	@PostMapping("/signup")
