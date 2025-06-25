@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/ws/greeting")
+@RequestMapping("greeting")
 public class GreetingController {
 	
 	@PostMapping
